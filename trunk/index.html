@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ROOSTER Sistema de Liquidación de Haberes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+    
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        
+        
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style type="text/css">
+	/*	nav  {
+    display: block;
+    width: 700px;
+    overflow: hidden;
+}
+
+nav ul {
+    margin: 15px 10px 120px 0;
+	    float:left;
+    padding: .7em;
+
+    list-style: none;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius: .5em;    
+    box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset; 
+}
+
+nav li {
+    float:left;
+}
+
+nav a {
+    float:left;
+    padding: .8em 1.5em;
+    text-decoration: none;
+    color: #555;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    font: bold 1.1em/1 'trebuchet MS', Arial, Helvetica;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff #ccc #999 #eee;
+    background: #c1c1c1;
+    background: linear-gradient(#f5f5f5, #c1c1c1);            
+ }
+ 
+nav a:hover, nav a:focus {
+    outline: 0;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+    background: #fac754;
+    background: linear-gradient(#fac754, #f8ac00);
+}
+
+nav a:active {
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+}
+ 
+nav li:first-child a {
+    border-left: 0;
+    border-radius: 4px 0 0 4px;            
+}
+
+nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 4px 4px 0;            
+}*/
+	
+	.menu {
+		list-style:none;
+		margin-top:50px;
+
+	}
+	
+	.menu li{
+		display:inline;
+	}
+
+	.cuadradouno {
+		padding-left:14px;
+		padding-top:45px;
+		padding-bottom:20px;
+		padding-right:14px;
+		margin: 40px;
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(0, #FBC054),
+			color-stop(1, #EB8918)
+		);
+		background-image: -o-linear-gradient(bottom, #FBC054 0%, #EB8918 100%);
+		background-image: -moz-linear-gradient(bottom, #FBC054 0%, #EB8918 100%);
+		background-image: -webkit-linear-gradient(bottom, #FBC054 0%, #EB8918 100%);
+		background-image: -ms-linear-gradient(bottom, #FBC054 0%, #EB8918 100%);
+		background-image: linear-gradient(to bottom, #FBC054 0%, #EB8918 100%);
+		border:1px solid #C90;
+		box-shadow: 0px 0px 2px #C90; 
+	}
+	
+	.cuadradodos {
+		padding-left:14px;
+		padding-top:45px;
+		padding-bottom:20px;
+		padding-right:14px;
+		margin: 20px;
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(0, #E03A50),
+			color-stop(1, #910F1C)
+		);
+		background-image: -o-linear-gradient(bottom, #E03A50 0%, #910F1C 100%);
+		background-image: -moz-linear-gradient(bottom, #E03A50 0%, #910F1C 100%);
+		background-image: -webkit-linear-gradient(bottom, #E03A50 0%, #910F1C 100%);
+		background-image: -ms-linear-gradient(bottom, #E03A50 0%, #910F1C 100%);
+		background-image: linear-gradient(to bottom, #E03A50 0%, #910F1C 100%);
+		border:1px solid #C70;
+		box-shadow: 0px 0px 2px #C90; 
+	}
+	
+	.cuadradotres {
+		padding-left:14px;
+		padding-top:45px;
+		padding-bottom:20px;
+		padding-right:14px;
+		margin: 20px;
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(0, #C85F97),
+			color-stop(1, #7E194F)
+		);
+		background-image: -o-linear-gradient(bottom, #C85F97 0%, #7E194F 100%);
+		background-image: -moz-linear-gradient(bottom, #C85F97 0%, #7E194F 100%);
+		background-image: -webkit-linear-gradient(bottom, #C85F97 0%, #7E194F 100%);
+		background-image: -ms-linear-gradient(bottom, #C85F97 0%, #7E194F 100%);
+		background-image: linear-gradient(to bottom, #C85F97 0%, #7E194F 100%);
+		border:1px solid #C90;
+		box-shadow: 0px 0px 2px #C90; 
+	}
+	
+	.cuadradouno a,.cuadradodos a,.cuadradotres a {
+		color:#FFF;
+		font-family:Bebas;
+		font-size:2.5em;
+		text-decoration:none;
+		
+	}
+	
+	.cuadradouno:hover, .cuadradodos:hover, .cuadradotres:hover {
+		 -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.5);
+		-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.5);
+		box-shadow: inset 0 2px 4px rgba(0,0,0,.5);
+		text-shadow: 1px 1px white, -1px -1px #999;
+	}
+		
+	
+	</style>
+    
+</head>
+
+<body>
+
+<div style="margin:30px; margin-left:120px;margin-right:80px; background-color:#FFF; border:1px solid #C90; padding:30px;border-radius: 25px;box-shadow: 3px 3px 3px #393; background:url(imagenes/retina_wood.png) repeat;">
+<!--d3cfbd borde FBEEC4-->
+<img src="imagenes/logo.jpg" width="320" height="202" style="float:left;">
+
+
+
+			
+            
+<!--            <div style="margin-left:50%;">
+            <div style="margin-left:-310px;">-->
+            <nav>
+                <ul class="menu">
+                    <li class="cuadradouno"><a href="">Inicio</a></li>
+                    <li class="cuadradodos"><a href="">Servicios</a></li>
+                    <li class="cuadradotres"><a href="">Contacto</a></li>               
+                </ul>
+            </nav>
+            
+            <div style="margin-left:300px; margin-top:40px; padding-left:40px;">
+            <h3 style="font-family: Lato,sans-serif;
+            font-weight: 900;
+color: rgb(51, 51, 51);
+line-height: 130%;
+letter-spacing: -1px;
+text-shadow: 1px 1px white;
+text-align: left;">BOR es un Sistema de Gestión Inmobiliario, este nos da la facilidad de administrar de forma eficaz sus inmuebles.</h3>
+            
+            </div>
+            <div style="height:15px; width:100%; border-bottom:1px solid #999;"></div>
+        <img src="imagenes/instalacion2.png" width="70" height="70" style="float:left;">
+        <p style="font-family: Lato,sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 130%;
+letter-spacing:2px;
+text-shadow: 1px 1px white;
+color: rgb(51, 51, 51); margin-top:15px; margin-left:80px;">Su instalación es sencilla y <span style=" font-style:italic;">la información guardada</span> es accedida solo por los <strong>clientes y la empresa</strong> en cuestión.</p>
+<!--			</div>
+            </div>-->
+        
+
+</div>
+
+<div style="border-top:1px solid #ededed; background-color:#FFF; padding:20px;">
+<h1>Nosotros</h1>
+
+
+</div>
+
+<div style="border-top:1px solid #ededed; background-color: #EAEAEA; padding:20px;">
+<h1>Nosotros</h1>
+
+
+</div>
+
+
+
+</body>
+</html>
